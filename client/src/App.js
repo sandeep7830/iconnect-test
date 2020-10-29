@@ -71,9 +71,25 @@ const [addpost, setaddpost] = useState(false)
           <input type="text" placeholder=" search comapnyname"name="companyname"value={companyname} onChange={e=>onchange(e)}/>
         </div>
         
-        <input type="submit"/>
+        <input  type="submit"/>
     </form>
-      <Posts posts={currentPosts} loading={loading} />
+     <table className='table'>
+     <thead>
+                <tr>
+                  <th >CompanyName</th>
+                  <th >description</th>
+                  <th >city</th>
+                  <th >state</th>
+                  <th >email</th>
+                  <th >number</th>
+                  <th />
+                </tr>
+            </thead>
+            <tbody>
+            {currentPosts.map(post=><Fragment><Posts post={post} loading={loading} /></Fragment>)}
+            </tbody>
+     </table>
+      
       
       <Pagination
         postsPerPage={postsPerPage}

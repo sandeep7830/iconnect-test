@@ -26,7 +26,7 @@ const onchange=e=>{
   }
     
 
-const submit=async()=>{
+  const submit=async()=>{
     
     const config={
         headers:{
@@ -41,6 +41,7 @@ const submit=async()=>{
     }
 
 }
+
 
 
 return (
@@ -75,13 +76,13 @@ return (
                 <option value="Pune">Pune</option>
                 <option value="Nagpur">Nagpur</option>
               </select>:(state==="Goa"?<select name="city" value={city} onChange={e=>onchange(e)}>  
-                <option value="Panjim">Panjim</option>
-                <option value="Intern">Goa</option>
-                <option value="Other">Gujrat</option>
+                <option value="Panjim">Panaji</option>
+                <option value="Intern">Baga</option>
+                <option value="Other">Anjuna</option>
               </select>:<select name="city" value={city} onChange={e=>onchange(e)}>  
                 <option value="surat">surat</option>
                 <option value="Gandinagar">Gandinagar</option>
-                <option value="Other">Gujrat</option>
+                <option value="Other">Rajkot</option>
               </select>)
             }
        
