@@ -61,7 +61,7 @@ const [addpost, setaddpost] = useState(false)
   return (
     
     <div className='container '>
-      <button onClick={e=>setaddpost(!addpost)} className='add'>add post</button>
+      <button onClick={e=>setaddpost(!addpost)} className='add'>add</button>
       {addpost&&<Fragment>
     <Addpost/>
     </Fragment>}
